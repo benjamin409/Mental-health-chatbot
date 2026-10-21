@@ -1,0 +1,50 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend
+web/node_modules/
+web/dist/
+web/client/dist/
+
+# Runtime/local state
+*.db
+*.sqlite
+*.sqlite3
+submissions.db
+web/submissions.db
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs and temp
+*.log
+*.tmp
+
+# Large local NLP assets (re-downloadable)
+nltk_data/
+
+# Duplicate download/copy artifacts
+*(1).csv
+*(1).json
+*(1).md
+*(1).txt
+*(1).py
+*(1).pkl

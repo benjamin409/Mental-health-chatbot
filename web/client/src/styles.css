@@ -1,0 +1,821 @@
+/*
+ * styles.css
+ * ----------
+ * The visual design answers a requirement from Chapter One rather than a
+ * matter of taste: the interface exists to lower the barrier to honest
+ * disclosure, in a setting where stigma discourages people from saying they
+ * are struggling.
+ *
+ * Consequences, all deliberate:
+ *   - warm paper tones rather than clinical white; nothing that resembles a
+ *     hospital form or a test
+ *   - generous space and a serif for the reading text, so it feels like a
+ *     notebook rather than a questionnaire
+ *   - no red anywhere, including for distress results; alarm colours tell
+ *     someone they are in trouble before they have finished reading
+ *   - the class colours match the figures in Chapter Four, so a reader moving
+ *     between the report and the running system sees the same coding
+ */
+
+:root {
+  --paper: #faf7f2;
+  --card: #ffffff;
+  --ink: #23201c;
+  --ink-soft: #57514a;
+  --ink-faint: #8b837a;
+  --line: #e6dfd4;
+  --line-soft: #f0ebe3;
+
+  --accent: #3f6f66;
+  --accent-soft: #eaf1ef;
+  --accent-deep: #2c534c;
+
+  /* Class colours, matching results/figures/*.png */
+  --normal: #0072b2;
+  --depression: #e69f00;
+  --anxiety: #009e73;
+  --stress: #cc79a7;
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 1px 2px rgba(35, 32, 28, 0.04),
+            0 8px 24px rgba(35, 32, 28, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 96px;
+}
+
+/* ---------------------------------------------------------------- header */
+.masthead { margin-bottom: 34px; }
+
+.masthead h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.masthead p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  max-width: 54ch;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-top: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 9px 14px;
+  font: inherit;
+  font-size: 14.5px;
+  color: var(--ink-faint);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  border-radius: 6px 6px 0 0;
+}
+.tab:hover { color: var(--ink-soft); background: var(--line-soft); }
+.tab[aria-selected="true"] {
+  color: var(--accent-deep);
+  border-bottom-color: var(--accent);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------- privacy */
+.privacy {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--accent-soft);
+  border: 1px solid #d9e6e2;
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  margin-bottom: 22px;
+  font-size: 14.5px;
+  color: var(--accent-deep);
+}
+.privacy svg { flex: none; margin-top: 2px; }
+.privacy strong { font-weight: 600; }
+
+/* ------------------------------------------------------------------ card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+/* ------------------------------------------------------------------ form */
+.prompt {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.prompt-help {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 168px;
+  resize: vertical;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fffdfa;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+textarea::placeholder { color: #b8afa3; }
+
+.form-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+}
+.wordcount { font-size: 13.5px; color: var(--ink-faint); }
+
+button.primary {
+  appearance: none;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+button.primary:hover:not(:disabled) { background: var(--accent-deep); }
+button.primary:disabled { background: #c7c0b6; cursor: not-allowed; }
+
+button.quiet {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+button.quiet:hover { background: var(--line-soft); color: var(--ink); }
+
+button.linky {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 13.5px;
+  color: var(--ink-faint);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+button.linky:hover { color: var(--ink); }
+
+/* --------------------------------------------------------------- notices */
+.notice {
+  margin-top: 16px;
+  padding: 12px 15px;
+  border-radius: var(--radius-sm);
+  font-size: 14.5px;
+  background: #fdf6e9;
+  border: 1px solid #f0e2c6;
+  color: #6b5426;
+}
+.notice.calm {
+  background: var(--line-soft);
+  border-color: var(--line);
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------------- result */
+.result { margin-top: 24px; }
+
+.result-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--line-soft);
+  color: var(--ink-soft);
+}
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+.result h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 8px 0 10px;
+  line-height: 1.35;
+}
+.result p { margin: 0 0 14px; color: var(--ink-soft); font-size: 15.5px; }
+
+.referral {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--accent-deep);
+  margin-bottom: 6px;
+}
+
+/* A Normal reading closes with a small suggestion rather than a flat nothing.
+   Lighter than .referral, because it is an aside and not a prompt to act. */
+.suggestion {
+  background: var(--line-soft);
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+/* ----------------------------------------------------------- confidence */
+.bars { margin: 18px 0 4px; }
+.bars-title {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+}
+.bar-row {
+  display: grid;
+  grid-template-columns: 92px 1fr 46px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+.bar-label { color: var(--ink-soft); }
+.bar-track {
+  height: 8px;
+  background: var(--line-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar-fill { height: 100%; border-radius: 999px; transition: width 0.5s ease; }
+.bar-value { text-align: right; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+
+/* --------------------------------------------------------------- history */
+.entry {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: var(--card);
+}
+.entry-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+}
+.entry-when { font-size: 13px; color: var(--ink-faint); }
+.entry-text {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  text-align: center;
+  padding: 44px 20px;
+  color: var(--ink-faint);
+  font-size: 15px;
+}
+
+.history-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+/* ----------------------------------------------------------------- about */
+.about h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 17px;
+  margin: 22px 0 7px;
+}
+.about h3:first-child { margin-top: 0; }
+.about p { color: var(--ink-soft); font-size: 15px; margin: 0 0 10px; }
+.about dl {
+  margin: 6px 0 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 18px;
+  font-size: 14.5px;
+}
+.about dt { color: var(--ink-faint); }
+.about dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------- footer */
+.foot {
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--ink-faint);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.spinner {
+  width: 15px; height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: 8px;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 560px) {
+  .app { padding: 26px 16px 70px; }
+  .masthead h1 { font-size: 25px; }
+  .bar-row { grid-template-columns: 78px 1fr 42px; }
+  .resources { padding: 13px 14px; }
+  .resource-tel { font-size: 18px; }
+}
+
+/* ------------------------------------------------------------- resources */
+/* Shown beneath a distress reading and on the information page. Deliberately
+   styled as part of the page rather than as an alert: a person who has just
+   read that their words suggest low mood does not need a red box. */
+.resources {
+  margin-top: 14px;
+  padding: 15px 17px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+}
+.resources.compact {
+  background: transparent;
+  border-color: var(--line-soft);
+  padding: 13px 15px;
+}
+
+.resources .resources-title {
+  margin: 0 0 11px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.resources-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.resources-list li { display: grid; gap: 2px; }
+
+.resource-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.resource-tel {
+  justify-self: start;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+.resource-tel:hover { text-decoration: underline; }
+.resource-note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-faint);
+}
+
+.resources .resources-foot {
+  margin: 13px 0 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-faint);
+}
+
+.about .resources { margin: 2px 0 20px; }
+
+/* --------------------------------------------------------- entry actions */
+.entry-actions {
+  margin-top: 9px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.foot button.linky { color: var(--accent); }
+.foot button.linky:hover { color: var(--accent-deep); }
+
+/* ------------------------------------------------------- keep-or-clear */
+/* The question is asked once, after a couple of entries. Neither answer is
+   styled as the recommended one: a person on a shared computer should feel no
+   pull toward keeping, and someone wanting a month of entries none toward
+   clearing. */
+.keep-choice { margin-top: 18px; }
+
+.keep-choice .keep-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 17px;
+  color: var(--ink);
+  margin: 0 0 9px;
+}
+.keep-choice .keep-body {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+.keep-choice .keep-caution { color: var(--ink); }
+
+.keep-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.keep-actions button { flex: 1 1 auto; }
+
+.keep-later {
+  display: block;
+  margin: 12px auto 0;
+}
+
+.history-pref {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-faint);
+}
+
+/* ================================================================
+   Landing page
+   ================================================================
+   Shown once, before the classification interface. Designed to
+   explain what the system does and earn the trust that makes honest
+   disclosure possible. Every colour and spacing choice follows the
+   same rules as the rest of the interface: warm, non-clinical,
+   nothing that resembles a hospital form or a test.
+   ================================================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.landing {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* --------------------------------------------------------------- hero */
+.landing-hero {
+  text-align: center;
+  padding: 72px 0 56px;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.landing-badge {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid #d0deda;
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 24px;
+}
+
+.landing-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+
+.landing-subtitle {
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin: 0 auto 32px;
+}
+
+.landing-cta {
+  font-size: 17px;
+  padding: 14px 38px;
+  letter-spacing: 0.01em;
+}
+
+.landing-note {
+  font-size: 13.5px;
+  color: var(--ink-faint);
+  margin: 14px 0 0;
+}
+
+/* ------------------------------------------------------------ sections */
+.landing-section {
+  padding: 48px 0 8px;
+  animation: fadeInUp 0.65s ease both;
+}
+
+.landing-heading {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.3;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+
+.landing-section-intro {
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0 0 24px;
+  line-height: 1.65;
+}
+
+/* -------------------------------------------------------- how it works */
+.landing-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.landing-step {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+}
+
+.landing-step-icon {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.landing-step-number {
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: 4px;
+}
+
+.landing-step-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.landing-step-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ------------------------------------------------------- what it reads */
+.landing-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.landing-category {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+
+.landing-category-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.landing-category-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.landing-category-label {
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+
+.landing-category-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ------------------------------------------------------- privacy card */
+.landing-privacy-card {
+  background: var(--accent-soft);
+  border: 1px solid #d0deda;
+  border-radius: var(--radius);
+  padding: 32px 28px;
+}
+
+.landing-privacy-icon {
+  color: var(--accent-deep);
+  margin-bottom: 14px;
+}
+
+.landing-privacy-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.landing-privacy-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--accent-deep);
+  margin-bottom: 10px;
+}
+
+.landing-privacy-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* --------------------------------------------------- model stats card */
+.landing-stats-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.landing-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px 24px;
+  margin: 0;
+}
+
+.landing-stat dt {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin-bottom: 2px;
+}
+
+.landing-stat dd {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+.landing-stats-note {
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------- bottom CTA */
+.landing-bottom-cta {
+  text-align: center;
+  padding: 52px 0 20px;
+}
+
+.landing-bottom-cta .landing-heading {
+  margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------- footer */
+.landing-footer {
+  text-align: center;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-faint);
+}
+
+.landing-footer p { margin: 0 0 6px; }
+
+/* --------------------------------------------------------- responsive */
+@media (max-width: 700px) {
+  .landing-hero { padding: 48px 0 36px; }
+  .landing-title { font-size: 30px; }
+  .landing-subtitle { font-size: 16px; }
+  .landing-steps { grid-template-columns: 1fr; }
+  .landing-categories { grid-template-columns: 1fr; }
+  .landing-stats { grid-template-columns: 1fr 1fr; }
+  .landing-privacy-card { padding: 22px 18px; }
+}
+
+@media (max-width: 400px) {
+  .landing { padding: 0 16px 48px; }
+  .landing-title { font-size: 26px; }
+  .landing-stats { grid-template-columns: 1fr; }
+}

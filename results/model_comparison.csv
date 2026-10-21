@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall,F1-score,F1 (macro),F1 (short entry),Training time (s)
+Logistic Regression,0.8485,0.8589,0.8485,0.8527,0.7568,0.8173,7.34
+Support Vector Machine,0.8396,0.8418,0.8396,0.8302,0.7198,0.8187,7.34
+Random Forest,0.8175,0.8428,0.8175,0.793,0.6257,0.7874,392.02

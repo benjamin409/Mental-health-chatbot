@@ -1,0 +1,5 @@
+Class,Precision,Recall,F1-score,Support
+Normal,0.932,0.8811,0.9059,2692
+Depression,0.8929,0.8765,0.8846,3005
+Anxiety,0.7095,0.8073,0.7553,711
+Stress,0.4367,0.5361,0.4813,457

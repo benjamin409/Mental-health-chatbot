@@ -1,0 +1,71 @@
+==========================================================================
+MODELLING AND EVALUATION
+==========================================================================
+
+Training set     : train_augmented.csv (66,720 records)
+Length-bias correction (segmentation): ENABLED
+Test records     : 6,865
+
+[1] Fitting TF-IDF vectorizer
+      max_features   = 15000
+      ngram_range    = (1, 2)
+      min_df         = 3
+      max_df         = 0.85
+      sublinear_tf   = True
+      Feature matrix : 66,720 x 15,000
+      Sparsity       : 99.724% zeros
+
+[2] Training Logistic Regression
+      Accuracy     : 0.8449
+      Precision (w): 0.8502
+      Recall (w)   : 0.8449
+      F1-score (w) : 0.8467
+      F1-score (m) : 0.7450
+      F1 on short entries (<= 25 tokens): 0.8135
+      Fitted in 9.7s
+
+[2] Training Support Vector Machine
+      Accuracy     : 0.8396
+      Precision (w): 0.8418
+      Recall (w)   : 0.8396
+      F1-score (w) : 0.8302
+      F1-score (m) : 0.7198
+      F1 on short entries (<= 25 tokens): 0.8187
+      Fitted in 7.6s
+
+[2] Training Random Forest
+      Accuracy     : 0.8175
+      Precision (w): 0.8428
+      Recall (w)   : 0.8175
+      F1-score (w) : 0.7930
+      F1-score (m) : 0.6257
+      F1 on short entries (<= 25 tokens): 0.7874
+      Fitted in 382.3s
+
+==========================================================================
+MODEL COMPARISON
+==========================================================================
+                 Model  Accuracy  Precision  Recall  F1-score  F1 (macro)  F1 (short entry)  Training time (s)
+   Logistic Regression    0.8449     0.8502  0.8449    0.8467      0.7450            0.8135               9.71
+Support Vector Machine    0.8396     0.8418  0.8396    0.8302      0.7198            0.8187               7.61
+         Random Forest    0.8175     0.8428  0.8175    0.7930      0.6257            0.7874             382.30
+
+Best performing model: Logistic Regression (weighted F1 = 0.8467)
+
+Per-class report for the selected model:
+              precision    recall  f1-score   support
+
+      Normal       0.94      0.87      0.90      2692
+  Depression       0.87      0.89      0.88      3005
+     Anxiety       0.71      0.79      0.75       711
+      Stress       0.44      0.46      0.45       457
+
+    accuracy                           0.84      6865
+   macro avg       0.74      0.75      0.74      6865
+weighted avg       0.85      0.84      0.85      6865
+
+  (Random Forest not persisted - see note in train.py; its metrics are recorded in model_metadata.json)
+
+Artefacts written to /root/mhms/models and /root/mhms/results
+Total runtime: 410.0s
+==========================================================================

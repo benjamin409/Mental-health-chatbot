@@ -1,0 +1,27 @@
+Evaluating 18 configurations
+char       C  stress  corpusF1  shortF1  userAcc   per-class on user text
+------------------------------------------------------------------------------------------------
+False    1.0     1.0    0.8527   0.8173    90.6%   Norm 8/8  Depr 8/8  Anxi 8/8  Stre 5/8
+False    1.0     2.0    0.8456   0.8064    87.5%   Norm 8/8  Depr 8/8  Anxi 6/8  Stre 6/8
+False    1.0     3.0    0.8427   0.7999    87.5%   Norm 8/8  Depr 8/8  Anxi 6/8  Stre 6/8
+False    5.0     1.0    0.8467   0.8135    78.1%   Norm 8/8  Depr 8/8  Anxi 6/8  Stre 3/8
+False    5.0     2.0    0.8434   0.8090    81.2%   Norm 7/8  Depr 8/8  Anxi 6/8  Stre 5/8
+False    5.0     3.0    0.8388   0.8012    78.1%   Norm 7/8  Depr 8/8  Anxi 6/8  Stre 4/8
+False   10.0     1.0    0.8414   0.8069    71.9%   Norm 7/8  Depr 8/8  Anxi 5/8  Stre 3/8
+False   10.0     2.0    0.8408   0.8056    78.1%   Norm 7/8  Depr 8/8  Anxi 5/8  Stre 5/8
+False   10.0     3.0    0.8379   0.8032    78.1%   Norm 7/8  Depr 8/8  Anxi 5/8  Stre 5/8
+True     1.0     1.0    0.8547   0.8254    78.1%   Norm 8/8  Depr 7/8  Anxi 7/8  Stre 3/8
+True     1.0     2.0    0.8516   0.8163    84.4%   Norm 8/8  Depr 8/8  Anxi 6/8  Stre 5/8
+True     1.0     3.0    0.8484   0.8118    81.2%   Norm 8/8  Depr 7/8  Anxi 6/8  Stre 5/8
+True     5.0     1.0    0.8476   0.8190    75.0%   Norm 8/8  Depr 8/8  Anxi 5/8  Stre 3/8
+True     5.0     2.0    0.8445   0.8148    75.0%   Norm 8/8  Depr 7/8  Anxi 5/8  Stre 4/8
+True     5.0     3.0    0.8448   0.8135    78.1%   Norm 7/8  Depr 7/8  Anxi 6/8  Stre 5/8
+True    10.0     1.0    0.8452   0.8151    75.0%   Norm 8/8  Depr 8/8  Anxi 5/8  Stre 3/8
+True    10.0     2.0    0.8417   0.8113    65.6%   Norm 7/8  Depr 7/8  Anxi 4/8  Stre 3/8
+True    10.0     3.0    0.8426   0.8100    68.8%   Norm 7/8  Depr 7/8  Anxi 4/8  Stre 4/8
+------------------------------------------------------------------------------------------------
+Baseline (word only, C=5, no boost): user 78.1%, corpus F1 0.8467
+Best on user text                  : char=False, C=1.0, stress_boost=1.0 -> user 90.6%, corpus F1 0.8527
+
+Written to /root/mhms/results/user_text_tuning.json
+Total 632s

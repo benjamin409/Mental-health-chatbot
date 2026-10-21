@@ -1,0 +1,13 @@
+==========================================================================
+GENERATING EVALUATION ARTEFACTS (best model: Logistic Regression)
+==========================================================================
+  fig_4_1_class_distribution.png
+  fig_4_2_model_comparison.png
+  fig_4_3_confusion_matrix.png
+  fig_4_4_per_class_f1.png
+  fig_4_5_top_features.png
+  results_tables.md, table_4_1_*.csv, table_4_2_*.csv
+  fig_4_6_length_bias_ablation.png, table_4_4_length_bias_ablation.csv
+
+Figures written to /root/mhms/results/figures
+==========================================================================

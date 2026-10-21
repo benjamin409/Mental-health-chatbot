@@ -1,0 +1,367 @@
+{
+  "best_model": "Logistic Regression",
+  "classes": [
+    "Normal",
+    "Depression",
+    "Anxiety",
+    "Stress"
+  ],
+  "augmented_training": true,
+  "training_file": "train_augmented.csv",
+  "tfidf_params": {
+    "max_features": 15000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 3,
+    "max_df": 0.85,
+    "sublinear_tf": true
+  },
+  "vocabulary_size": 15000,
+  "train_records": 66720,
+  "test_records": 6865,
+  "random_state": 42,
+  "trained_at": "2026-08-23 16:45:08",
+  "results": {
+    "Logistic Regression": {
+      "accuracy": 0.8485069191551348,
+      "precision_weighted": 0.8588731666241778,
+      "recall_weighted": 0.8485069191551348,
+      "f1_weighted": 0.8527124484403431,
+      "precision_macro": 0.7427857493838452,
+      "recall_macro": 0.7752717622484331,
+      "f1_macro": 0.7567740015646889,
+      "training_time_seconds": 7.34,
+      "prediction_time_seconds": 0.005,
+      "per_class": {
+        "Normal": {
+          "precision": 0.9320235756385069,
+          "recall": 0.8811292719167905,
+          "f1-score": 0.9058621348100058,
+          "support": 2692.0
+        },
+        "Depression": {
+          "precision": 0.8928813559322034,
+          "recall": 0.8765391014975041,
+          "f1-score": 0.8846347607052897,
+          "support": 3005.0
+        },
+        "Anxiety": {
+          "precision": 0.7095179233621756,
+          "recall": 0.8073136427566807,
+          "f1-score": 0.7552631578947369,
+          "support": 711.0
+        },
+        "Stress": {
+          "precision": 0.43672014260249553,
+          "recall": 0.5361050328227571,
+          "f1-score": 0.481335952848723,
+          "support": 457.0
+        },
+        "accuracy": 0.8485069191551348,
+        "macro avg": {
+          "precision": 0.7427857493838453,
+          "recall": 0.7752717622484331,
+          "f1-score": 0.7567740015646889,
+          "support": 6865.0
+        },
+        "weighted avg": {
+          "precision": 0.8588731666241776,
+          "recall": 0.8485069191551348,
+          "f1-score": 0.8527124484403431,
+          "support": 6865.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          2372,
+          128,
+          61,
+          131
+        ],
+        [
+          118,
+          2634,
+          116,
+          137
+        ],
+        [
+          31,
+          58,
+          574,
+          48
+        ],
+        [
+          24,
+          130,
+          58,
+          245
+        ]
+      ],
+      "short_entry": {
+        "accuracy": 0.8129643117261471,
+        "precision_weighted": 0.8256227379892976,
+        "recall_weighted": 0.8129643117261471,
+        "f1_weighted": 0.8173479452319973,
+        "precision_macro": 0.6986015301313213,
+        "recall_macro": 0.734076930937119,
+        "f1_macro": 0.7132299923117417,
+        "confusion_matrix": [
+          [
+            2415,
+            111,
+            56,
+            110
+          ],
+          [
+            228,
+            2398,
+            173,
+            206
+          ],
+          [
+            52,
+            54,
+            562,
+            43
+          ],
+          [
+            58,
+            139,
+            54,
+            206
+          ]
+        ]
+      },
+      "cv_f1_mean": 0.8271808682487635,
+      "cv_f1_std": 0.0020150246990425485
+    },
+    "Support Vector Machine": {
+      "accuracy": 0.8396212672978879,
+      "precision_weighted": 0.8418013135589972,
+      "recall_weighted": 0.8396212672978879,
+      "f1_weighted": 0.8301596774173144,
+      "precision_macro": 0.7893504569543417,
+      "recall_macro": 0.6976667969017125,
+      "f1_macro": 0.7198233378493442,
+      "training_time_seconds": 7.34,
+      "prediction_time_seconds": 0.028,
+      "per_class": {
+        "Normal": {
+          "precision": 0.9550657058075456,
+          "recall": 0.836924219910847,
+          "f1-score": 0.8921005741437339,
+          "support": 2692.0
+        },
+        "Depression": {
+          "precision": 0.786381109280615,
+          "recall": 0.9530782029950083,
+          "f1-score": 0.8617421393109673,
+          "support": 3005.0
+        },
+        "Anxiety": {
+          "precision": 0.7785923753665689,
+          "recall": 0.7468354430379747,
+          "f1-score": 0.7623833452979182,
+          "support": 711.0
+        },
+        "Stress": {
+          "precision": 0.6373626373626373,
+          "recall": 0.2538293216630197,
+          "f1-score": 0.36306729264475746,
+          "support": 457.0
+        },
+        "accuracy": 0.8396212672978879,
+        "macro avg": {
+          "precision": 0.7893504569543417,
+          "recall": 0.6976667969017124,
+          "f1-score": 0.7198233378493442,
+          "support": 6865.0
+        },
+        "weighted avg": {
+          "precision": 0.8418013135589973,
+          "recall": 0.8396212672978879,
+          "f1-score": 0.8301596774173144,
+          "support": 6865.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          2253,
+          357,
+          42,
+          40
+        ],
+        [
+          62,
+          2864,
+          65,
+          14
+        ],
+        [
+          27,
+          141,
+          531,
+          12
+        ],
+        [
+          17,
+          280,
+          44,
+          116
+        ]
+      ],
+      "short_entry": {
+        "accuracy": 0.8282592862345229,
+        "precision_weighted": 0.8259634846422246,
+        "recall_weighted": 0.8282592862345229,
+        "f1_weighted": 0.8186804364648702,
+        "precision_macro": 0.7723248761563106,
+        "recall_macro": 0.6839906595446974,
+        "f1_macro": 0.7059651587604843,
+        "confusion_matrix": [
+          [
+            2287,
+            339,
+            39,
+            27
+          ],
+          [
+            105,
+            2780,
+            92,
+            28
+          ],
+          [
+            43,
+            153,
+            503,
+            12
+          ],
+          [
+            46,
+            254,
+            41,
+            116
+          ]
+        ]
+      },
+      "cv_f1_mean": 0.8449564563231305,
+      "cv_f1_std": 0.001621642888098214
+    },
+    "Random Forest": {
+      "accuracy": 0.8174799708667152,
+      "precision_weighted": 0.8427956040993342,
+      "recall_weighted": 0.8174799708667152,
+      "f1_weighted": 0.7930321708839821,
+      "precision_macro": 0.8668485505942192,
+      "recall_macro": 0.6047962852910349,
+      "f1_macro": 0.6256906429315071,
+      "training_time_seconds": 392.02,
+      "prediction_time_seconds": 0.986,
+      "per_class": {
+        "Normal": {
+          "precision": 0.9496314496314496,
+          "recall": 0.861441307578009,
+          "f1-score": 0.9033891702376314,
+          "support": 2692.0
+        },
+        "Depression": {
+          "precision": 0.7299214593362047,
+          "recall": 0.9587354409317803,
+          "f1-score": 0.8288262370540852,
+          "support": 3005.0
+        },
+        "Anxiety": {
+          "precision": 0.8619153674832962,
+          "recall": 0.5443037974683544,
+          "f1-score": 0.6672413793103448,
+          "support": 711.0
+        },
+        "Stress": {
+          "precision": 0.9259259259259259,
+          "recall": 0.05470459518599562,
+          "f1-score": 0.10330578512396695,
+          "support": 457.0
+        },
+        "accuracy": 0.8174799708667152,
+        "macro avg": {
+          "precision": 0.8668485505942191,
+          "recall": 0.6047962852910349,
+          "f1-score": 0.6256906429315071,
+          "support": 6865.0
+        },
+        "weighted avg": {
+          "precision": 0.8427956040993342,
+          "recall": 0.8174799708667152,
+          "f1-score": 0.7930321708839821,
+          "support": 6865.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          2319,
+          360,
+          12,
+          1
+        ],
+        [
+          96,
+          2881,
+          28,
+          0
+        ],
+        [
+          20,
+          303,
+          387,
+          1
+        ],
+        [
+          7,
+          403,
+          22,
+          25
+        ]
+      ],
+      "short_entry": {
+        "accuracy": 0.8122359796067007,
+        "precision_weighted": 0.8325227674599908,
+        "recall_weighted": 0.8122359796067007,
+        "f1_weighted": 0.7874285719168757,
+        "precision_macro": 0.8458121059267746,
+        "recall_macro": 0.5948514866392789,
+        "f1_macro": 0.6175877708446045,
+        "confusion_matrix": [
+          [
+            2332,
+            346,
+            11,
+            3
+          ],
+          [
+            110,
+            2862,
+            33,
+            0
+          ],
+          [
+            25,
+            333,
+            352,
+            1
+          ],
+          [
+            14,
+            386,
+            27,
+            30
+          ]
+        ]
+      },
+      "cv_f1_mean": 0.7776007263984335,
+      "cv_f1_std": 0.002322897817788388
+    }
+  }
+}

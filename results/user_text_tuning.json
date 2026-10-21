@@ -1,0 +1,524 @@
+{
+  "results": [
+    {
+      "use_char": false,
+      "C": 1.0,
+      "stress_boost": 1.0,
+      "corpus_f1": 0.8527124484403431,
+      "short_f1": 0.8173479452319973,
+      "user_accuracy": 0.90625,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          8,
+          8
+        ],
+        "Stress": [
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 1.0,
+      "stress_boost": 2.0,
+      "corpus_f1": 0.84555273619022,
+      "short_f1": 0.8064315038661704,
+      "user_accuracy": 0.875,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 1.0,
+      "stress_boost": 3.0,
+      "corpus_f1": 0.8426816467380689,
+      "short_f1": 0.7999481072638077,
+      "user_accuracy": 0.875,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 5.0,
+      "stress_boost": 1.0,
+      "corpus_f1": 0.8466734259992024,
+      "short_f1": 0.8134802834882185,
+      "user_accuracy": 0.78125,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 5.0,
+      "stress_boost": 2.0,
+      "corpus_f1": 0.8433526004831625,
+      "short_f1": 0.8089676988895628,
+      "user_accuracy": 0.8125,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 5.0,
+      "stress_boost": 3.0,
+      "corpus_f1": 0.8387855188815644,
+      "short_f1": 0.8011929578437721,
+      "user_accuracy": 0.78125,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          4,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 10.0,
+      "stress_boost": 1.0,
+      "corpus_f1": 0.8414209992389501,
+      "short_f1": 0.8068842196462603,
+      "user_accuracy": 0.71875,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          5,
+          8
+        ],
+        "Stress": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 10.0,
+      "stress_boost": 2.0,
+      "corpus_f1": 0.8407570251200044,
+      "short_f1": 0.8055550528909279,
+      "user_accuracy": 0.78125,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          5,
+          8
+        ],
+        "Stress": [
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": false,
+      "C": 10.0,
+      "stress_boost": 3.0,
+      "corpus_f1": 0.8379285943377296,
+      "short_f1": 0.8031844159147715,
+      "user_accuracy": 0.78125,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          5,
+          8
+        ],
+        "Stress": [
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 1.0,
+      "stress_boost": 1.0,
+      "corpus_f1": 0.8546955520315106,
+      "short_f1": 0.8254286152633322,
+      "user_accuracy": 0.78125,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          7,
+          8
+        ],
+        "Anxiety": [
+          7,
+          8
+        ],
+        "Stress": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 1.0,
+      "stress_boost": 2.0,
+      "corpus_f1": 0.851601675960009,
+      "short_f1": 0.8163129064162672,
+      "user_accuracy": 0.84375,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 1.0,
+      "stress_boost": 3.0,
+      "corpus_f1": 0.8483793377491587,
+      "short_f1": 0.8117734132841059,
+      "user_accuracy": 0.8125,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          7,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 5.0,
+      "stress_boost": 1.0,
+      "corpus_f1": 0.8475915875569717,
+      "short_f1": 0.8190286273293498,
+      "user_accuracy": 0.75,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          5,
+          8
+        ],
+        "Stress": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 5.0,
+      "stress_boost": 2.0,
+      "corpus_f1": 0.8444540994154007,
+      "short_f1": 0.8148046588743413,
+      "user_accuracy": 0.75,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          7,
+          8
+        ],
+        "Anxiety": [
+          5,
+          8
+        ],
+        "Stress": [
+          4,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 5.0,
+      "stress_boost": 3.0,
+      "corpus_f1": 0.8447594697160546,
+      "short_f1": 0.8135015024808995,
+      "user_accuracy": 0.78125,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          7,
+          8
+        ],
+        "Anxiety": [
+          6,
+          8
+        ],
+        "Stress": [
+          5,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 10.0,
+      "stress_boost": 1.0,
+      "corpus_f1": 0.8451522550511329,
+      "short_f1": 0.8151217940389145,
+      "user_accuracy": 0.75,
+      "user_per_class": {
+        "Normal": [
+          8,
+          8
+        ],
+        "Depression": [
+          8,
+          8
+        ],
+        "Anxiety": [
+          5,
+          8
+        ],
+        "Stress": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 10.0,
+      "stress_boost": 2.0,
+      "corpus_f1": 0.8417276091141283,
+      "short_f1": 0.8113424115559714,
+      "user_accuracy": 0.65625,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          7,
+          8
+        ],
+        "Anxiety": [
+          4,
+          8
+        ],
+        "Stress": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "use_char": true,
+      "C": 10.0,
+      "stress_boost": 3.0,
+      "corpus_f1": 0.8425803480314241,
+      "short_f1": 0.8100058875332732,
+      "user_accuracy": 0.6875,
+      "user_per_class": {
+        "Normal": [
+          7,
+          8
+        ],
+        "Depression": [
+          7,
+          8
+        ],
+        "Anxiety": [
+          4,
+          8
+        ],
+        "Stress": [
+          4,
+          8
+        ]
+      }
+    }
+  ],
+  "best": {
+    "use_char": false,
+    "C": 1.0,
+    "stress_boost": 1.0,
+    "corpus_f1": 0.8527124484403431,
+    "short_f1": 0.8173479452319973,
+    "user_accuracy": 0.90625,
+    "user_per_class": {
+      "Normal": [
+        8,
+        8
+      ],
+      "Depression": [
+        8,
+        8
+      ],
+      "Anxiety": [
+        8,
+        8
+      ],
+      "Stress": [
+        5,
+        8
+      ]
+    }
+  },
+  "baseline": {
+    "use_char": false,
+    "C": 5.0,
+    "stress_boost": 1.0,
+    "corpus_f1": 0.8466734259992024,
+    "short_f1": 0.8134802834882185,
+    "user_accuracy": 0.78125,
+    "user_per_class": {
+      "Normal": [
+        8,
+        8
+      ],
+      "Depression": [
+        8,
+        8
+      ],
+      "Anxiety": [
+        6,
+        8
+      ],
+      "Stress": [
+        3,
+        8
+      ]
+    }
+  }
+}

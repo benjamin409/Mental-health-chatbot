@@ -1,0 +1,4 @@
+Model,"Full text, baseline","Full text, corrected","Short entry, baseline","Short entry, corrected"
+Logistic Regression,0.8622,0.8527,0.7721,0.8173
+Support Vector Machine,0.8553,0.8302,0.7684,0.8187
+Random Forest,0.7901,0.793,0.7253,0.7874

@@ -1,0 +1,67 @@
+{
+  "median_tokens_by_class": {
+    "Anxiety": 57.0,
+    "Depression": 60.0,
+    "Normal": 7.0,
+    "Stress": 45.0
+  },
+  "augment_training": true,
+  "segment_window": 25,
+  "segment_stride": 18,
+  "max_segments_per_doc": 4,
+  "augmented_train_records": 66720,
+  "profiles": [
+    {
+      "stage": "raw",
+      "records": 53043,
+      "class_counts": {
+        "Normal": 16351,
+        "Depression": 15404,
+        "Suicidal": 10653,
+        "Anxiety": 3888,
+        "Bipolar": 2877,
+        "Stress": 2669,
+        "Personality disorder": 1201
+      }
+    },
+    {
+      "stage": "four_classes",
+      "records": 38312,
+      "class_counts": {
+        "Normal": 16351,
+        "Depression": 15404,
+        "Anxiety": 3888,
+        "Stress": 2669
+      }
+    },
+    {
+      "stage": "cleaned",
+      "records": 34325,
+      "class_counts": {
+        "Depression": 15025,
+        "Normal": 13459,
+        "Anxiety": 3556,
+        "Stress": 2285
+      }
+    }
+  ],
+  "imbalance_ratio": 6.575,
+  "train_records": 27460,
+  "test_records": 6865,
+  "train_class_counts": {
+    "Depression": 12020,
+    "Normal": 10767,
+    "Anxiety": 2845,
+    "Stress": 1828
+  },
+  "test_class_counts": {
+    "Depression": 3005,
+    "Normal": 2692,
+    "Anxiety": 711,
+    "Stress": 457
+  },
+  "mean_tokens_after_cleaning": 55.54,
+  "median_tokens_after_cleaning": 28.0,
+  "random_state": 42,
+  "test_size": 0.2
+}
